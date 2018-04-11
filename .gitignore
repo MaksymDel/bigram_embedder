@@ -3,8 +3,5 @@ fastText-0.1.0
 .idea
 *.pyc
 .ipynb_checkpoints
-bigram_embedder/predictors
 static_html
-tests/fixtures/model*
-tests/predictors
 experiments

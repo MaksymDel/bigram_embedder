@@ -1,0 +1,1 @@
+from bigram_embedder.predictors.bigram_embedder_predictor import BigramEmbedderPredictor

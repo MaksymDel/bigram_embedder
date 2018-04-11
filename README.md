@@ -10,9 +10,9 @@
 * run `step4` script to extract actual wordpair_vec -> bigram_vec corpus needed to train prediction model
 ### Train model
 To train this model, after setting up your development environment by installing what is in `requirements.txt`, 
-fastText-0.1.0(https://fasttext.cc/) and `spacy>=2.0`, you run:
+fastText-0.1.0 (https://fasttext.cc/) and `spacy>=2.0`, you run:
 ```bash
-python -m allennlp.run train experiments/venue_classifier.json -s /models --include-package towards_machine_reasoning
+python -m allennlp.run train experiments/bigram_embedder.json -s /models --include-package bigram_embedder
 ```
 
 This project relies on `python-3.6`.

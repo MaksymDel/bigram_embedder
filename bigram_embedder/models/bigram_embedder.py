@@ -79,37 +79,14 @@ class BigramEmbedder(Model):
         output_dict = {'bigram_vecs_hat': bigram_vecs_hat}
         if bigram_vector is not None:
             loss = self.loss(bigram_vecs_hat, bigram_vector)
-            #for metric in self.metrics.values():
-             #   metric(bigram_vecs_hat, bigram_vecs)
             output_dict["loss"] = loss
 
         return output_dict
-
-    # @overrides
-    # def decode(self, output_dict: Dict[str, torch.Tensor]) -> Dict[str, torch.Tensor]:
-    #     """
-    #     Does a simple argmax over the class probabilities, converts indices to string labels, and
-    #     adds a ``"label"`` key to the dictionary with the result.
-    #     """
-    #     class_probabilities = F.softmax(output_dict['logits'], dim=-1)
-    #     output_dict['class_probabilities'] = class_probabilities
-    #
-    #     predictions = class_probabilities.cpu().data.numpy()
-    #     argmax_indices = numpy.argmax(predictions, axis=-1)
-    #     labels = [self.vocab.get_token_from_index(x, namespace="labels")
-    #               for x in argmax_indices]
-    #     output_dict['label'] = labels
-    #     return output_dict
-
-    # @overrides
-    # def get_metrics(self, reset: bool = False) -> Dict[str, float]:
-    #     return {metric_name: metric.get_metric(reset) for metric_name, metric in self.metrics.items()}
 
     @classmethod
     def from_params(cls, vocab: Vocabulary, params: Params) -> 'BigramEmbedder':
         mapping_layer_params = params.pop("mapping_layer")
         mapping_layer = FeedForward.from_params(mapping_layer_params)
-
 
         initializer = InitializerApplicator.from_params(params.pop('initializer', []))
         regularizer = RegularizerApplicator.from_params(params.pop('regularizer', []))
