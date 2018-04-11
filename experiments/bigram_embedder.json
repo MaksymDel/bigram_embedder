@@ -18,12 +18,12 @@
   },
   "iterator": {
     "type": "basic",
-    "batch_size": 586557
+    "batch_size": 10000
   },
 
   "trainer": {
     "num_epochs": 100000000,
-    "patience": 1000,
+    "patience": 50,
     "cuda_device": 0,
     "grad_clipping": 5.0,
     "validation_metric": "-loss",
