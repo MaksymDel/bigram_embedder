@@ -1,0 +1,5 @@
+allennlp==0.4.1
+pytest
+pytest-pythonpath
+
+# also you have to install fastText-0.1.0 externally: https://fasttext.cc/
