@@ -9,10 +9,10 @@
     "type": "bigram_embedder",
     "mapping_layer": {
       "input_dim": 200,
-      "num_layers": 2,
-      "hidden_dims": [175, 125],
-      "activations": ["relu", "relu"],
-      "dropout": [0.2, 0.0]
+      "num_layers": 3,
+      "hidden_dims": [175, 125, 100],
+      "activations": ["relu", "relu", "linear"],
+      "dropout": [0.3, 0.2, 0.0]
     }
   },
   "iterator": {
@@ -21,7 +21,7 @@
   },
 
   "trainer": {
-    "num_epochs": 1,
+    "num_epochs": 2,
     "cuda_device": -1,
     "grad_clipping": 5.0,
     "validation_metric": "-loss",
