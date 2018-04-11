@@ -1,4 +1,4 @@
-# Generating phrase vectors inside skip-gram embedding space 
+# Phrase representations via association module operating in predefined skip-gram space 
 
 ## Results replication guide
 ### Prepare data for training
