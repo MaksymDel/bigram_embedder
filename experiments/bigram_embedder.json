@@ -2,9 +2,9 @@
   "dataset_reader": {
     "type": "wordpair_bigram_vectors"
   },
-  "train_data_path": "tests/fixtures/bigram_vecs.tsv",
-  "validation_data_path": "tests/fixtures/bigram_vecs.tsv",
-  "test_data_path": "tests/fixtures/bigram_vecs.tsv",
+  "train_data_path": "/gpfs/hpchome/maksym95/bigram_embedder/data/step5_holduot_splits/train_all_shuffled.tsv",
+  "validation_data_path": "/gpfs/hpchome/maksym95/bigram_embedder/data/step5_holduot_splits/dev_all_shuffled.tsv",
+  "test_data_path": "/gpfs/hpchome/maksym95/bigram_embedder/data/step5_holduot_splits/test_all_shuffled.tsv",
   "evaluate_on_test": true,
   "model": {
     "type": "bigram_embedder",
@@ -24,7 +24,7 @@
   "trainer": {
     "num_epochs": 100000000,
     "patience": 1000,
-    "cuda_device": -1,
+    "cuda_device": 0,
     "grad_clipping": 5.0,
     "validation_metric": "-loss",
     "optimizer": {
