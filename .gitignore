@@ -1,9 +1,13 @@
 fastText-0.1.0
+.pytest_cache
 .idea
 *.pyc
 .ipynb_checkpoints
-bigram_embedder
+bigram_embedder/models
+bigram_embedder/predictors
 static_html
-tests
+tests/fixtures/model*
+tests/models
+tests/predictors
 pytest.ini
 experiments
