@@ -12,7 +12,7 @@
 To train this model, after setting up your development environment by installing what is in `requirements.txt`, 
 fastText-0.1.0 (https://fasttext.cc/) and `spacy>=2.0`, you run:
 ```bash
-python -m allennlp.run train experiments/bigram_embedder.json -s /models --include-package bigram_embedder
+python -m allennlp.run train experiments/bigram_embedder.json -s models/bigram_embedder_feedforw --include-package bigram_embedder
 ```
 
 This project relies on `python-3.6`.

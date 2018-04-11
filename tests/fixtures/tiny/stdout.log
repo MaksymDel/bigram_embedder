@@ -1,79 +1,79 @@
-2018-04-11 18:26:11,514 - INFO - allennlp.common.params - dataset_reader.type = wordpair_bigram_vectors
-2018-04-11 18:26:11,514 - INFO - allennlp.common.params - dataset_reader.lazy = False
-2018-04-11 18:26:11,515 - INFO - allennlp.common.params - validation_dataset_reader = None
-2018-04-11 18:26:11,515 - INFO - allennlp.common.params - train_data_path = tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,515 - INFO - allennlp.commands.train - Reading training data from tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,516 - INFO - bigram_embedder.dataset_readers.wordpair_bigram_vectors - Reading vectors from lines in file at: tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,518 - INFO - allennlp.common.params - validation_data_path = tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,518 - INFO - allennlp.commands.train - Reading validation data from tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,519 - INFO - bigram_embedder.dataset_readers.wordpair_bigram_vectors - Reading vectors from lines in file at: tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,520 - INFO - allennlp.common.params - test_data_path = tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,520 - INFO - allennlp.commands.train - Reading test data from tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,521 - INFO - bigram_embedder.dataset_readers.wordpair_bigram_vectors - Reading vectors from lines in file at: tests/fixtures/bigram_vecs.tsv
-2018-04-11 18:26:11,523 - INFO - allennlp.commands.train - Creating a vocabulary using test, validation, train data.
-2018-04-11 18:26:11,523 - INFO - allennlp.common.params - vocabulary.directory_path = None
-2018-04-11 18:26:11,523 - INFO - allennlp.common.params - vocabulary.min_count = None
-2018-04-11 18:26:11,523 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
-2018-04-11 18:26:11,523 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
-2018-04-11 18:26:11,523 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
-2018-04-11 18:26:11,523 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
-2018-04-11 18:26:11,524 - INFO - allennlp.common.params - model.type = bigram_embedder
-2018-04-11 18:26:11,524 - INFO - allennlp.common.params - model.mapping_layer.input_dim = 200
-2018-04-11 18:26:11,524 - INFO - allennlp.common.params - model.mapping_layer.num_layers = 3
-2018-04-11 18:26:11,525 - INFO - allennlp.common.params - model.mapping_layer.hidden_dims = [175, 125, 100]
-2018-04-11 18:26:11,525 - INFO - allennlp.common.params - model.mapping_layer.activations = ['relu', 'relu', 'linear']
-2018-04-11 18:26:11,525 - INFO - allennlp.common.params - model.mapping_layer.dropout = [0.3, 0.2, 0.0]
-2018-04-11 18:26:11,526 - INFO - allennlp.common.params - model.initializer = []
-2018-04-11 18:26:11,527 - INFO - allennlp.common.params - model.regularizer = []
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers - Initializing parameters
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers - Done initializing parameters; the following parameters are using their default initialization from their code
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.0.bias
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.0.weight
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.1.bias
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.1.weight
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.2.bias
-2018-04-11 18:26:11,527 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.2.weight
-2018-04-11 18:26:11,527 - INFO - allennlp.common.params - iterator.type = basic
-2018-04-11 18:26:11,527 - INFO - allennlp.common.params - iterator.batch_size = 10
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - iterator.instances_per_epoch = None
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - iterator.max_instances_in_memory = None
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.patience = 2
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.validation_metric = -loss
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.num_epochs = 2
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.cuda_device = -1
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.grad_norm = None
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.grad_clipping = 5.0
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.optimizer.type = adam
-2018-04-11 18:26:11,528 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - trainer.optimizer.lr = 0.001
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - trainer.num_serialized_models_to_keep = None
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - trainer.keep_serialized_model_every_num_seconds = None
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - trainer.model_save_interval = None
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - trainer.summary_interval = 100
-2018-04-11 18:26:11,529 - INFO - allennlp.common.params - trainer.histogram_interval = None
-2018-04-11 18:26:11,531 - INFO - allennlp.common.params - evaluate_on_test = False
-2018-04-11 18:26:11,531 - INFO - allennlp.training.trainer - Beginning training.
-2018-04-11 18:26:11,531 - INFO - allennlp.training.trainer - Epoch 0/1
-2018-04-11 18:26:11,531 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 207.424
-2018-04-11 18:26:11,540 - INFO - allennlp.training.trainer - Training
-2018-04-11 18:26:11,545 - INFO - allennlp.training.trainer - Validating
-2018-04-11 18:26:11,548 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to 'tests/fixtures/tiny/best.th'.
-2018-04-11 18:26:11,549 - INFO - allennlp.training.trainer - Training loss : 0.061328    Validation loss : 0.058370 
-2018-04-11 18:26:11,549 - INFO - allennlp.training.trainer - Epoch duration: 00:00:00
-2018-04-11 18:26:11,549 - INFO - allennlp.training.trainer - Estimated training time remaining: 00:00:00
-2018-04-11 18:26:11,549 - INFO - allennlp.training.trainer - Epoch 1/1
-2018-04-11 18:26:11,550 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 212.316
-2018-04-11 18:26:11,566 - INFO - allennlp.training.trainer - Training
-2018-04-11 18:26:11,571 - INFO - allennlp.training.trainer - Validating
-2018-04-11 18:26:11,577 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to 'tests/fixtures/tiny/best.th'.
-2018-04-11 18:26:11,578 - INFO - allennlp.training.trainer - Training loss : 0.058983    Validation loss : 0.056021 
-2018-04-11 18:26:11,579 - INFO - allennlp.training.trainer - Epoch duration: 00:00:00
-2018-04-11 18:26:11,579 - INFO - allennlp.models.archival - archiving weights and vocabulary to tests/fixtures/tiny/model.tar.gz
-2018-04-11 18:26:11,599 - INFO - allennlp.commands.train - To evaluate on the test set after training, pass the 'evaluate_on_test' flag, or use the 'allennlp evaluate' command.
-2018-04-11 18:26:11,599 - INFO - allennlp.commands.train - Metrics: {
+2018-04-11 18:48:22,242 - INFO - allennlp.common.params - dataset_reader.type = wordpair_bigram_vectors
+2018-04-11 18:48:22,243 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-04-11 18:48:22,243 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-04-11 18:48:22,243 - INFO - allennlp.common.params - train_data_path = tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,243 - INFO - allennlp.commands.train - Reading training data from tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,244 - INFO - bigram_embedder.dataset_readers.wordpair_bigram_vectors - Reading vectors from lines in file at: tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,245 - INFO - allennlp.common.params - validation_data_path = tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,245 - INFO - allennlp.commands.train - Reading validation data from tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,246 - INFO - bigram_embedder.dataset_readers.wordpair_bigram_vectors - Reading vectors from lines in file at: tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,247 - INFO - allennlp.common.params - test_data_path = tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,247 - INFO - allennlp.commands.train - Reading test data from tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,248 - INFO - bigram_embedder.dataset_readers.wordpair_bigram_vectors - Reading vectors from lines in file at: tests/fixtures/bigram_vecs.tsv
+2018-04-11 18:48:22,249 - INFO - allennlp.commands.train - Creating a vocabulary using train, test, validation data.
+2018-04-11 18:48:22,249 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2018-04-11 18:48:22,249 - INFO - allennlp.common.params - vocabulary.min_count = None
+2018-04-11 18:48:22,249 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2018-04-11 18:48:22,249 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2018-04-11 18:48:22,249 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2018-04-11 18:48:22,249 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2018-04-11 18:48:22,250 - INFO - allennlp.common.params - model.type = bigram_embedder
+2018-04-11 18:48:22,250 - INFO - allennlp.common.params - model.mapping_layer.input_dim = 200
+2018-04-11 18:48:22,250 - INFO - allennlp.common.params - model.mapping_layer.num_layers = 3
+2018-04-11 18:48:22,251 - INFO - allennlp.common.params - model.mapping_layer.hidden_dims = [175, 125, 100]
+2018-04-11 18:48:22,251 - INFO - allennlp.common.params - model.mapping_layer.activations = ['relu', 'relu', 'linear']
+2018-04-11 18:48:22,251 - INFO - allennlp.common.params - model.mapping_layer.dropout = [0.3, 0.2, 0.0]
+2018-04-11 18:48:22,252 - INFO - allennlp.common.params - model.initializer = []
+2018-04-11 18:48:22,253 - INFO - allennlp.common.params - model.regularizer = []
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers - Initializing parameters
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers - Done initializing parameters; the following parameters are using their default initialization from their code
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.0.bias
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.0.weight
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.1.bias
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.1.weight
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.2.bias
+2018-04-11 18:48:22,253 - INFO - allennlp.nn.initializers -    mapping_layer._linear_layers.2.weight
+2018-04-11 18:48:22,253 - INFO - allennlp.common.params - iterator.type = basic
+2018-04-11 18:48:22,253 - INFO - allennlp.common.params - iterator.batch_size = 10
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - iterator.instances_per_epoch = None
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - iterator.max_instances_in_memory = None
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.patience = 2
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.validation_metric = -loss
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.num_epochs = 2
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.cuda_device = -1
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.grad_norm = None
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.grad_clipping = 5.0
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2018-04-11 18:48:22,254 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - trainer.optimizer.lr = 0.001
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - trainer.num_serialized_models_to_keep = None
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - trainer.keep_serialized_model_every_num_seconds = None
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - trainer.model_save_interval = None
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - trainer.summary_interval = 100
+2018-04-11 18:48:22,255 - INFO - allennlp.common.params - trainer.histogram_interval = None
+2018-04-11 18:48:22,256 - INFO - allennlp.common.params - evaluate_on_test = True
+2018-04-11 18:48:22,256 - INFO - allennlp.training.trainer - Beginning training.
+2018-04-11 18:48:22,256 - INFO - allennlp.training.trainer - Epoch 0/1
+2018-04-11 18:48:22,257 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 208.36
+2018-04-11 18:48:22,263 - INFO - allennlp.training.trainer - Training
+2018-04-11 18:48:22,271 - INFO - allennlp.training.trainer - Validating
+2018-04-11 18:48:22,276 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to 'tests/fixtures/tiny/best.th'.
+2018-04-11 18:48:22,277 - INFO - allennlp.training.trainer - Training loss : 0.061328    Validation loss : 0.058370 
+2018-04-11 18:48:22,278 - INFO - allennlp.training.trainer - Epoch duration: 00:00:00
+2018-04-11 18:48:22,278 - INFO - allennlp.training.trainer - Estimated training time remaining: 00:00:00
+2018-04-11 18:48:22,278 - INFO - allennlp.training.trainer - Epoch 1/1
+2018-04-11 18:48:22,278 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 213.696
+2018-04-11 18:48:22,291 - INFO - allennlp.training.trainer - Training
+2018-04-11 18:48:22,296 - INFO - allennlp.training.trainer - Validating
+2018-04-11 18:48:22,299 - INFO - allennlp.training.trainer - Best validation performance so far. Copying weights to 'tests/fixtures/tiny/best.th'.
+2018-04-11 18:48:22,300 - INFO - allennlp.training.trainer - Training loss : 0.058983    Validation loss : 0.056021 
+2018-04-11 18:48:22,300 - INFO - allennlp.training.trainer - Epoch duration: 00:00:00
+2018-04-11 18:48:22,300 - INFO - allennlp.models.archival - archiving weights and vocabulary to tests/fixtures/tiny/model.tar.gz
+2018-04-11 18:48:22,321 - INFO - allennlp.commands.evaluate - Iterating over dataset
+2018-04-11 18:48:22,322 - INFO - allennlp.commands.train - Metrics: {
   "training_duration": "00:00:00",
   "training_start_epoch": 0,
   "training_epochs": 2,

@@ -4,4 +4,3 @@ fastText-0.1.0
 *.pyc
 .ipynb_checkpoints
 static_html
-experiments
