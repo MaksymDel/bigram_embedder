@@ -1,1 +1,1 @@
-# Phrase embeddings models in allennlp format
+# Bigram embeddings models in allennlp format

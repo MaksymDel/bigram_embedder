@@ -1,4 +1,4 @@
-# Phrase representations via association module inside predefined skip-gram embedding space 
+# Bigram representations inside predefined skip-gram embedding space 
 
 ## Results replication guide
 ### Prepare data for training

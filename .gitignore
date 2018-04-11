@@ -2,7 +2,7 @@ fastText-0.1.0
 .idea
 *.pyc
 .ipynb_checkpoints
-towards_machine_reasoning
+bigram_embedder
 static_html
 tests
 pytest.ini
