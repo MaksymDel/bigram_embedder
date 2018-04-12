@@ -9,7 +9,6 @@ from allennlp.service.predictors.predictor import Predictor
 @Predictor.register('bigram-embedder')
 class BigramEmbedderPredictor(Predictor):
     """"Predictor wrapper for the BigramEmbedder"""
-
     @overrides
     def load_line(self, line: str) -> JsonDict:
         _, _, word1_vector_str, word2_vector_str = line.split('\t')
