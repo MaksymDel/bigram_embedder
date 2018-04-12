@@ -1,0 +1,35 @@
+{
+  "dataset_reader": {
+    "type": "wordpair_bigram_vectors"
+  },
+  "train_data_path": "/gpfs/hpchome/maksym95/bigram_embedder/data/step5_holduot_splits/train_all_shuffled_likelihood_ratio-300-0.05.tsv",
+  "validation_data_path": "/gpfs/hpchome/maksym95/bigram_embedder/data/step5_holduot_splits/dev_all_shuffled_likelihood_ratio-300-0.05.tsv",
+  "test_data_path": "/gpfs/hpchome/maksym95/bigram_embedder/data/step5_holduot_splits/test_all_shuffled_likelihood_ratio-300-0.05.tsv",
+  "evaluate_on_test": true,
+  "model": {
+    "type": "bigram_embedder",
+    "mapping_layer": {
+      "input_dim": 600,
+      "num_layers": 4,
+      "hidden_dims": [525, 450, 375, 300],
+      "activations": ["tanh", "tanh", "tanh", "linear"],
+      "dropout": [0.3, 0.2, 0.1, 0.0]
+    }
+  },
+  "iterator": {
+    "type": "basic",
+    "batch_size": 100000
+  },
+
+  "trainer": {
+    "num_epochs": 100000000,
+    "patience": 500,
+    "cuda_device": 0,
+    "grad_clipping": 5.0,
+    "validation_metric": "-loss",
+    "optimizer": {
+      "type": "adam",
+      "lr": 0.001
+    }
+  }
+}
