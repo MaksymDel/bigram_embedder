@@ -7,11 +7,11 @@
   "test_data_path": "/gpfs/hpchome/maksym95/bigram_embedder/data/step5_holduot_splits/test_all_shuffled.tsv",
   "evaluate_on_test": true,
   "model": {
-    "type": "bigram_embedder_ws",
+    "type": "bigram_embedder_dimwise_ws",
     "mapping_layer": {
       "input_dim": 200,
       "num_layers": 2,
-      "hidden_dims": [100, 2],
+      "hidden_dims": [200, 200],
       "activations": ["tanh", "linear"],
       "dropout": [0.2, 0.0]
     }
