@@ -1,1 +1,2 @@
 from bigram_embedder.models.bigram_embedder import BigramEmbedder
+from bigram_embedder.models.bigram_embedder_weighted_sum import BigramEmbedderWeightedSum
