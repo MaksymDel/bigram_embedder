@@ -1,4 +1,4 @@
-# Bigram representations inside predefined skip-gram embedding space 
+# Unsupervised Compositional Modeling Framework for Phrases 
 
 ## Results replication guide
 ### Prepare data for training
